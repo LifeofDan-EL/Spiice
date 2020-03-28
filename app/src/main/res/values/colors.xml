@@ -6,5 +6,14 @@
     <color name="colorTransparentWhite">#CCCCCC</color>
     <color name="colorLightPurple">#E1BEE7</color>
     <color name="colorPurple">#AB47BC</color>
+    <color name="colorBlack">#070707</color>
+
+
+    <!-- dots active colors -->
+    <color name="dot_dark">#AA00FF</color>
+
+
+    <!-- dots inactive colors -->
+    <color name="dot_light">#F3E5F5</color>
 </resources>
 

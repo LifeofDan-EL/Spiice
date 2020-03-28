@@ -1,4 +1,17 @@
 <resources>
     <string name="app_name">Freelancer</string>
-    <string name="find_projects">Find projects from companies everywhere in the world</string>
+
+
+    <string name="pref_name">My Pref</string>
+    <string name="pref_key">My Key</string>
+
+
+    <!--    Onboarding Descriptions-->
+    <string name="slide_find_projects">Find projects from companies everywhere in the world</string>
+    <string name="slide_make_money">Make money while working on awesome projects</string>
+    <string name="slide_chat">Chat with other freelancers and develop your network</string>
+    <string name="slide_level">Work hard and level up</string>
+    <string name="slide_enjoy">Enjoy your progress</string>
+    <string name="spiice">Spiice</string>
+
 </resources>
