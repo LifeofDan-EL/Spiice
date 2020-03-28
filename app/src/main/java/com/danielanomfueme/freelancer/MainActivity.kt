@@ -1,11 +1,9 @@
 package com.danielanomfueme.freelancer
 
 import android.content.Intent
-import android.graphics.pdf.PdfDocument
 import android.os.Build
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.view.ContextMenu
 import android.view.View
 import android.view.ViewGroup
 import android.view.WindowManager
@@ -114,7 +112,7 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
     }
 
     private fun loadHome() {
-        startActivity(Intent(this, WelcomeActivity::class.java))
+        startActivity(Intent(this, SignUpActivity::class.java))
         finish()
     }
 

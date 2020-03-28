@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "11231813620",
+    "firebase_url": "https://freelancer-b3b0e.firebaseio.com",
+    "project_id": "freelancer-b3b0e",
+    "storage_bucket": "freelancer-b3b0e.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:11231813620:android:650fd49c5e1d7a4d1023a1",
+        "android_client_info": {
+          "package_name": "com.danielanomfueme.freelancer"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "11231813620-2b743godq6jqqkbl7mm0tmqr5arfr4t8.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBZq0kqwX2oy9N7NCchI4AqLZmiACnj3T8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "11231813620-2b743godq6jqqkbl7mm0tmqr5arfr4t8.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
