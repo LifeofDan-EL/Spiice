@@ -1,67 +1,44 @@
 package com.danielanomfueme.freelancer
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.view.MenuItem
+import androidx.annotation.NonNull
 import androidx.fragment.app.FragmentTransaction
 import com.google.android.material.bottomnavigation.BottomNavigationView
 
 class FeedActivity : AppCompatActivity() {
-
-    lateinit var feedFragment : FeedFragment
-    lateinit var searchFragment: SearchFragment
-    lateinit var messageFragment: MessageFragment
-    lateinit var profileFragment: ProfileFragment
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.feed_layout)
 
-        val bottomNavigation : BottomNavigationView = findViewById(R.id.bottom_nav)
+        val bottomNavigationView : BottomNavigationView = findViewById(R.id.bottom_nav)
 
+        bottomNavigationView.setOnNavigationItemSelectedListener()
+        run({ R.id.feed })
+        bottomNavigationView.setOnNavigationItemSelectedListener(object:BottomNavigationView.OnNavigationItemSelectedListener() {
+            override fun onNavigationItemSelected(@NonNull menuitem: MenuItem):Boolean {
+                val menuItem
+                when (menuItem.getItemId()) {
+                    R.id.Message -> {
+                        val intent = Intent (this, MessagesActivity::class.java)
+                        startActivity(intent)
+                        overridePendingTransition(0, 0)
 
-
-        bottomNavigation.setOnNavigationItemSelectedListener { item ->
-            when  (item.itemId){
-
-                R.id.feed -> {
-                    feedFragment = FeedFragment()
-                    supportFragmentManager
-                        .beginTransaction()
-                        .replace(R.id.fragment_feed,feedFragment)
-                        .setTransition(FragmentTransaction.TRANSIT_FRAGMENT_OPEN)
-                        .commit()
+                        return true
+                    }
+                    R.id.feed -> return true
+                    R.id.dashboard -> {
+                        startActivity(Intent(getApplicationContext(, Dashboard::class.java)))
+                        overridePendingTransition(0, 0)
+                        return true
+                    }
                 }
-
-                R.id.search -> {
-                    searchFragment = SearchFragment()
-                    supportFragmentManager
-                        .beginTransaction()
-                        .replace(R.id.frame_layout,searchFragment)
-                        .setTransition(FragmentTransaction.TRANSIT_FRAGMENT_OPEN)
-                        .commit()
-                }
-
-                R.id.Message -> {
-                    messageFragment = MessageFragment()
-                    supportFragmentManager
-                        .beginTransaction()
-                        .replace(R.id.frame_layout,messageFragment)
-                        .setTransition(FragmentTransaction.TRANSIT_FRAGMENT_OPEN)
-                        .commit()
-                }
-
-                R.id.profile -> {
-                    profileFragment = ProfileFragment()
-                    supportFragmentManager
-                        .beginTransaction()
-                        .replace(R.id.frame_layout,profileFragment)
-                        .setTransition(FragmentTransaction.TRANSIT_FRAGMENT_OPEN)
-                        .commit()
-                }
+                return false
             }
-            true
-        }
-
+        })
     }
 }
